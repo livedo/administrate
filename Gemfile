@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem "administrate-field-image"
+gem "administrate-field-image", git: 'https://github.com/hayesr/administrate-field-image', branch: 'rails5_compat'
+gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 gem "delayed_job_active_record"
 gem "high_voltage"
 gem "markdown-rails"
@@ -24,7 +25,8 @@ group :development, :test do
   gem "faker"
   gem "i18n-tasks"
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.4.2"
+  gem "rspec-rails", "3.5.0.beta3"
+  gem "rails-controller-testing"
 end
 
 group :test do
